@@ -130,7 +130,7 @@ function App() {
   const [reliefEligibility, setReliefEligibility] =
   useState<any>(null);
 
-  const [ownershipStatus, setOwnershipStatus] =
+  const [ownershipStatus] =
   useState("Verified");
 
   const [selectedBuilding, setSelectedBuilding] =

@@ -35,7 +35,14 @@ export default function Property3D({
 
   switch (property?.id) {
     case "VC-001":
-      return <HBlock3D {...common} />;
+  return (
+    <HBlock3D
+      {...common}
+      selectedFloor={common.selectedFloor ?? null}
+      onFloorSelect={common.onFloorSelect ?? (() => {})}
+      resetSignal={common.resetSignal ?? 0}
+    />
+  );
 
     case "VC-002":
       return <MedicalBlock3D {...common} />;
