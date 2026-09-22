@@ -1,0 +1,203 @@
+/* =========================================================
+   V-CADRE 3D MAP
+========================================================= */
+
+.vcadre-map-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.vcadre-3d-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Make MapLibre canvas fill the container */
+
+.vcadre-3d-map .maplibregl-canvas {
+  outline: none;
+}
+
+
+/* =========================================================
+   MAP CONTROLS
+========================================================= */
+
+.vcadre-map-shell
+  .maplibregl-ctrl-group {
+  border: none;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.18);
+}
+
+
+.vcadre-map-shell
+  .maplibregl-ctrl-group
+  button {
+  width: 38px;
+  height: 38px;
+
+  background: rgba(255, 255, 255, 0.96);
+}
+
+
+.vcadre-map-shell
+  .maplibregl-ctrl-group
+  button:hover {
+  background: #f1f5f9;
+}
+
+
+/* =========================================================
+   V-CADRE BADGE
+========================================================= */
+
+.vcadre-map-badge {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  background: rgba(15, 23, 42, 0.9);
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.22);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   LIVE DOT
+========================================================= */
+
+.vcadre-map-badge-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.18);
+}
+
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+.vcadre-map-help {
+  position: absolute;
+
+  bottom: 16px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+
+  padding: 8px 13px;
+
+  border-radius: 7px;
+
+  background: rgba(15, 23, 42, 0.82);
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  backdrop-filter: blur(6px);
+}
+
+
+/* =========================================================
+   MAPLIBRE ATTRIBUTION
+========================================================= */
+
+.vcadre-map-shell
+  .maplibregl-ctrl-attrib {
+  background: rgba(255, 255, 255, 0.88);
+
+  border-radius: 5px 0 0 0;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .vcadre-map-shell {
+    height: 520px;
+  }
+
+  .vcadre-map-help {
+    font-size: 10px;
+
+    bottom: 12px;
+
+    max-width: 90%;
+
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .vcadre-map-shell {
+    height: 460px;
+
+    border-radius: 10px;
+  }
+
+  .vcadre-map-badge {
+    top: 10px;
+    left: 10px;
+
+    font-size: 10px;
+
+    padding: 7px 10px;
+  }
+}
+

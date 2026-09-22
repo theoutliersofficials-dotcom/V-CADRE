@@ -1,0 +1,111 @@
+/* ==========================================================================
+   V-CADRE GOVERNMENT CADASTRE PORTAL - BASE RESETS & DESIGN TOKENS
+   ========================================================================== */
+
+:root {
+  /* Government Palette Tokens */
+  --gov-navy-900: #071e3d;
+  --gov-navy-800: #0b2f64;
+  --gov-navy-700: #0e3d7e;
+  --gov-blue-600: #1a56a0;
+  --gov-blue-500: #2563eb;
+  --gov-blue-100: #e0edfb;
+  --gov-blue-50:  #f0f6fd;
+
+  /* Official Accent & State Colors */
+  --gov-gold-600: #b45309;
+  --gov-gold-500: #d97706;
+  --gov-gold-100: #fef3c7;
+  --gov-green-700: #047857;
+  --gov-green-600: #059669;
+  --gov-green-100: #dcfce7;
+  --gov-red-700:   #b91c1c;
+  --gov-red-600:   #dc2626;
+  --gov-red-100:   #fee2e2;
+
+  /* Neutral Surface & Border Tokens */
+  --gov-bg-page:   #f4f6f9;
+  --gov-bg-card:   #ffffff;
+  --gov-bg-muted:  #f8fafc;
+  --gov-border:    #cbd5e1;
+  --gov-border-subtle: #e2e8f0;
+
+  /* Typography Colors */
+  --gov-text-primary:   #0f172a;
+  --gov-text-secondary: #334155;
+  --gov-text-muted:     #64748b;
+  --gov-text-inverse:   #ffffff;
+
+  /* Typography Stacks */
+  --gov-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --gov-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Elevation */
+  --gov-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --gov-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --gov-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --gov-shadow-panel: 0 12px 32px -4px rgba(11, 47, 100, 0.12);
+
+  font-family: var(--gov-font-sans);
+  color: var(--gov-text-primary);
+  background-color: var(--gov-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gov-bg-page);
+  color: var(--gov-text-primary);
+  font-family: var(--gov-font-sans);
+  font-size: 14px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: var(--gov-blue-600);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
