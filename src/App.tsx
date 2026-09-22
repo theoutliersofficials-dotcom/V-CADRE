@@ -174,7 +174,7 @@ function App() {
       setSelectedProperty(null);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/topology/validate"
+        "https://v-cadre.onrender.com/topology/validate"
       );
 
       if (!response.ok) {
@@ -552,7 +552,7 @@ setReliefEligibility(
       try {
         const healthResponse =
           await fetch(
-            "http://127.0.0.1:8000/health"
+            "https://v-cadre.onrender.com/health"
           );
 
         if (!healthResponse.ok) {
@@ -565,7 +565,7 @@ setReliefEligibility(
 
         const buildingsResponse =
           await fetch(
-            "http://127.0.0.1:8000/buildings"
+            "https://v-cadre.onrender.com/buildings"
           );
 
         const buildingsData =
@@ -575,7 +575,7 @@ setReliefEligibility(
 
         const floorsResponse =
           await fetch(
-            "http://127.0.0.1:8000/buildings/1/floors"
+            "https://v-cadre.onrender.com/buildings/1/floors"
           );
 
         const floorsData =
@@ -626,7 +626,7 @@ setReliefEligibility(
 
         const spacesResponse =
           await fetch(
-            `http://127.0.0.1:8000/buildings/floors/${floor.id}/spaces`
+            `https://v-cadre.onrender.com/buildings/floors/${floor.id}/spaces`
           );
 
         if (!spacesResponse.ok) {
@@ -677,7 +677,7 @@ setReliefEligibility(
               async (floor) => {
                 const response =
                   await fetch(
-                    `http://127.0.0.1:8000/buildings/floors/${floor.id}/spaces`
+                    `https://v-cadre.onrender.com/buildings/floors/${floor.id}/spaces`
                   );
 
                 if (!response.ok) {
@@ -773,7 +773,7 @@ setReliefEligibility(
 
         const response =
           await fetch(
-            `http://127.0.0.1:8000/buildings/spaces/${space.id}/assets`
+            `https://v-cadre.onrender.com/buildings/spaces/${space.id}/assets`
           );
 
         if (!response.ok) {
@@ -823,7 +823,7 @@ setReliefEligibility(
     try {
       const response =
         await fetch(
-          "http://127.0.0.1:8000/auth/login",
+          "https://v-cadre.onrender.com/auth/login",
           {
             method: "POST",
             headers: {
@@ -925,7 +925,7 @@ setReliefEligibility(
     try {
       const response =
         await fetch(
-          "http://127.0.0.1:8000/auth/register",
+          "https://v-cadre.onrender.com/auth/register",
           {
             method: "POST",
             headers: {
